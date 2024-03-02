@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin: 10px; /* Adjust as needed for your layout */
+  border-radius: 25px; /* Rounded corners */
+  background: #fff; /* White background */
+  color: #000; /* Text color */
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  border: 1px solid #ccc; /* Light border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-size: 16px; /* Adjust as needed */
+  text-align: center; /* Center text */
+}
+
+.custom-file-upload:hover {
+  background: #f8f8f8; /* Slightly darker background on hover */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Adjust the FontAwesome icon size and alignment if necessary */
+.fa-cloud-upload {
+  margin-right: 8px;
+}
