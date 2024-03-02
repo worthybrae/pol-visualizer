@@ -108,16 +108,23 @@ function DataVisualization() {
           return null;
         }).filter(p => p);
 
-        const xs = rawPoints.map(p => p.x); 
-        const ys = rawPoints.map(p => p.y);
-        const zs = rawPoints.map(p => p.z);
+        const xs = [];
+        const ys = [];
+        const zs = [];
+
+        rawPoints.forEach(p => {
+            xs.push(p.x);
+            ys.push(p.y);
+            zs.push(p.z);
+        });
+
         const minX = Math.min(...xs); 
         const maxX = Math.max(...xs); 
         const minY = Math.min(...ys); 
         const maxY = Math.max(...ys);
         const minZ = Math.min(...zs); 
         const maxZ = Math.max(...zs); 
-        console.log(minX, maxX, minY, maxY, minZ, maxZ);
+        
         // Normalize points
         const newPoints = rawPoints.map(p => ({
           position: new THREE.Vector3(
@@ -195,6 +202,7 @@ function CameraController({ dataPoints }) {
     if (dataPoints.length > 0) {
       // Find min and max for each axis
       console.log(dataPoints[0]);
+
       const xs = dataPoints.map(p => p.position.x);
       const ys = dataPoints.map(p => p.position.y);
 
